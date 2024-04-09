@@ -19,14 +19,13 @@ app.use(bodyParser.json());
 const jwt = require("jsonwebtoken");
 const User = require("./models/user");
 const Chat = require("./models/message");
-
 mongoose
-  .connect("mongodb+srv://yassinkokabi4:iusvJvYsT81HAyJU@cluster0.ccmkang.mongodb.net/")
+  .connect("mongodb+srv://yassinkokabi4:iusvJvYsT81HAyJU@cluster0.ccmkang.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => {
     console.log("Connected to MongoDB");
   })
   .catch((error) => {
-    console.log("Error connecting to MongoDB");
+    console.log(error);
   });
 
 app.listen(port, () => {
