@@ -82,7 +82,7 @@ const sendVerificationEmail = async (email, verificationToken) => {
     from: "matchmake.com",
     to: email,
     subject: "Email verification",
-    text: `Please click on the following link to verify your email : http://localhost:3000/verify/${verificationToken}`,
+    text: `Please click on the following link to verify your email : https://dating-0k7t.onrender.com/verify/${verificationToken}`,
   };
 
   //send the mail
